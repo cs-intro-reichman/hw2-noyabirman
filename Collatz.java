@@ -25,6 +25,7 @@ public class Collatz {
 					System.out.print(num+ " ");
 				}
 			}
+			totalSteps++;
 			if (mode.equals("v")) {
 				System.out.println("(" + totalSteps + ")");	
 			}
