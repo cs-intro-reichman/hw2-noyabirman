@@ -16,7 +16,7 @@ public class Collatz {
 				totalSteps = 4;
 			} else {
 				if (mode.equals("v")) {
-					System.out.print((seed)+ " ");	
+					System.out.print(seed+ " ");	
 				}
 				
 				while (num!=1){
@@ -31,22 +31,23 @@ public class Collatz {
 						System.out.print(num+ " ");
 					}
 				}
+
 				totalSteps++;
 				if (mode.equals("v")) {
 					System.out.println("(" + totalSteps + ")");	
+				}
+
 			}
-			if (num != 1){
-				reached1=false;
-			}
-		}	
+		}
+		
 		if (reached1) {
 			System.out.println("Every one of the first "+ N+ " hailstone sequences reached 1.");
 
 		}
 		
-		}	
 	}
-}
+	}
+
 
 	
 	
