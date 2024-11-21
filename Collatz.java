@@ -1,4 +1,3 @@
-// Demonstrates the Collatz conjecture.
 public class Collatz {
 	public static void main(String args[]) {
 		int N= Integer.parseInt(args[0]);
@@ -11,7 +10,7 @@ public class Collatz {
 
 			if (seed==1){
 				if (mode.equals("v")) {
-					System.out.println("4 2 1 (4)");
+					System.out.println("1 4 2 1 (4)");
 				}
 				totalSteps = 4;
 			} else {
@@ -36,17 +35,28 @@ public class Collatz {
 				if (mode.equals("v")) {
 					System.out.println("(" + totalSteps + ")");	
 				}
+			}
 
+			if (num != 1) {
+                reached1 = false;
 			}
 		}
-		
 		if (reached1) {
 			System.out.println("Every one of the first "+ N+ " hailstone sequences reached 1.");
+		
 
 		}
-		
 	}
-	}
+}
+
+
+	
+	
+
+	
+
+
+
 
 
 	
