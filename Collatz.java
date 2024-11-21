@@ -8,26 +8,32 @@ public class Collatz {
 		for (int seed=1;seed<=N;seed++){
 			int num=seed;
 			int totalSteps=0;
-			
-			if (mode.equals("v")) {
-				System.out.print((seed)+ " ");	
-			}
 
-			while (num!=1){
-				if (num%2==0){
-					num/=2;
-				} else {
-					num=num*3+1;
+			if (seed==1){
+				if (mode.equals("v")) {
+					System.out.println("4 2 1 (4)");
+				}
+				totalSteps = 4;
+			} else {
+				if (mode.equals("v")) {
+					System.out.print((seed)+ " ");	
+				}
+				
+				while (num!=1){
+					if (num%2==0){
+						num/=2;
+					} else {
+						num=num*3+1;
+					}
+					totalSteps++;
+					
+					if (mode.equals("v")) {
+						System.out.print(num+ " ");
+					}
 				}
 				totalSteps++;
-				
 				if (mode.equals("v")) {
-					System.out.print(num+ " ");
-				}
-			}
-			totalSteps++;
-			if (mode.equals("v")) {
-				System.out.println("(" + totalSteps + ")");	
+					System.out.println("(" + totalSteps + ")");	
 			}
 			if (num != 1){
 				reached1=false;
@@ -40,6 +46,7 @@ public class Collatz {
 		
 		}	
 	}
+}
 
 	
 	
